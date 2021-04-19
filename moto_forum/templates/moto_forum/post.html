@@ -1,0 +1,11 @@
+{% extends 'moto_forum/base.html' %}
+
+{% block content %}
+<h1>{{ post.model }}</h1>
+
+{% if post.photo %}
+    <p><img class="img-article-left" src="{{ post.photo.url }}"></p>
+{% endif %}
+
+{{ post.content|linebreaks }}
+{% endblock %}
